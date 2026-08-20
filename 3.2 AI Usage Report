@@ -1,0 +1,28 @@
+AI Task 1 – Choosing the Fractal
+
+Prompt:
+What fractal would be suitable for Part 3 if I want a simple implementation of fewer than 50 lines that can still demonstrate PyTorch tensor operations and parallelism?
+
+Result:
+The AI compared several fractals, including the Barnsley Fern, Koch Snowflake and Sierpiński Triangle. I selected the Sierpiński Triangle because its algorithm is simple, easy to explain, and can be implemented efficiently using PyTorch tensors.
+
+My Decision:
+I reviewed the suggested options and chose the Sierpiński Triangle because it provided a good balance between code simplicity, clear self-similarity and the assignment requirements.
+
+AI Task 2 – Implementing Parallelism with PyTorch
+
+Prompt:
+How can I implement the Sierpiński Triangle using PyTorch tensors so that many points are processed together instead of using a Python loop for every individual point?
+
+Result:
+The AI suggested storing all points in a single PyTorch tensor, generating random vertex selections for all points at once, and updating their coordinates using:
+
+points = (points + selected_vertices) / 2
+
+This allows the same transformation to be applied to many points simultaneously using vectorised tensor operations.
+
+Technical Challenge:
+The most difficult part was understanding how PyTorch was being used as a major part of the fractal algorithm rather than only for storing data. I learned that the tensor operations update many points together, which provides parallelism and avoids processing every point individually with a Python loop.
+
+Outcome:
+I tested the implementation, confirmed that it generated the expected Sierpiński Triangle, and verified that the main fractal calculations were performed using PyTorch tensors.
